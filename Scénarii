@@ -13,7 +13,7 @@ Un gestionnaire crée une nouvelle ressource
 Un gestionnaire modifie une ressource
 Un gestionnaire déréférence une ressource
 Un gestionnaire enregistre une perte
-Un gestionnaire crée un nouvel utilisateur
+Un gestionnaire crée un nouvel adhérent
 Un gestionnaire modifie les données personnelles d'un adhérent
 Un gestionnaire rend un adhérent "défaillant"
 Un gestionnaire crée une estimation des pertes liés à une ressource
