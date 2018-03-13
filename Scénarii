@@ -16,5 +16,6 @@ Un gestionnaire modifie les données personnelles d'un adhérent
 Un gestionnaire rend un adhérent "défaillant"
 Un gestionnaire crée une estimation des pertes liés à une ressource
 Un gestionnaire commande de nouvelles ressources
+Déconnexion d'un utilisateur ?
 
 
