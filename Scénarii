@@ -16,8 +16,8 @@ Un gestionnaire enregistre une perte
 Un gestionnaire crée un nouvel adhérent
 Un gestionnaire modifie les données personnelles d'un adhérent
 Un gestionnaire rend un adhérent "défaillant"
-Un gestionnaire crée une estimation des pertes liés à une ressource //Ne se fait pas par le site ?
-Un gestionnaire commande de nouvelles ressources //Pas d'utilisation du site pour ça
+Un gestionnaire crée une estimation des pertes liés à une ressource //Si c'est dans le cahier des charges
+Un gestionnaire commande de nouvelles ressources //Il rentre sur une page le nombre de ressources achetées
 Déconnexion d'un utilisateur ?
 
 
