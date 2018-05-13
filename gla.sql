@@ -117,7 +117,7 @@ CREATE TABLE `reservation` (
   `ID_MEMBRE` int(11) NOT NULL,
   `ID_RESSOURCE` int(11) NOT NULL,
   `DATE_RESERV` date NOT NULL,
-  `DATE_RETOUR` date NOT NULL
+  `DATE_RETOUR` date 
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
