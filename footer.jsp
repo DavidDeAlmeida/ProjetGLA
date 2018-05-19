@@ -1,0 +1,1 @@
+﻿<span id="mentionsLegales">Copyright © 2017 - Cédric Chapelle</span>
