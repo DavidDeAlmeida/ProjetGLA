@@ -1,0 +1,26 @@
+Commencer par fonctionnalités du visiteur :
+-Informations générales
+-Recherche
+
+-Connexion/Deconnexion (+ Maintenir session et savoir si le compte est adhérent ou gestionnaire)
+
+Partie Adhérent :
+-Réservation
+-Emprunt/date de retour
+-Solde
+-Compte (espace privé avec ses informations perso.)
+
+
+Partie Gestionnaire :
+-Gestion des informations générales (Création/modification/suppression)
+-Gestion des ressources (Création/modification/suppresion)
+-Gestion des utilisateurs (Création/modification/suppression/rendre défaillant)
+-Gestion des flux (Estimation des couts de perte des ressources pour une période donnée.
+                   Estimation des pertes engendrées par ressources.
+                   Si une ressource est trop demandée, achat de ressources ou réduction du délai d'emprunt.)
+                   
+                   
+ Voir contraintes économiques
+ 
+ 
+ Voir cahier-des-charges-groupe-F pour plus d'infos
