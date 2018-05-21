@@ -79,7 +79,6 @@ CREATE TABLE `ressource` (
   `ANNEE_PUBLI` year(4) NULL,
   'NUM_NIVEAU' int(3),
   'NUM_ETAGERE' int(3)
-
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
