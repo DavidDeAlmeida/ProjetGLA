@@ -73,7 +73,7 @@ CREATE TABLE `ressource` (
   `CAUTION` float NOT NULL,
   `NBR_JOUR_RETOUR` int(11) NOT NULL,
   `DEREFERENCE` tinyint(1) NOT NULL,
-  `TYPE_RESS` char(1) NOT NULL,
+  `TYPE_RESS` varchar(5) NOT NULL,
   `NOM` varchar(100) NOT NULL,
   `AUTEUR` varchar(40) NOT NULL,
   `ANNEE_PUBLI` year(4) NOT NULL,
