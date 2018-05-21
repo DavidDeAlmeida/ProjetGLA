@@ -110,7 +110,7 @@ CREATE TABLE `utilisateur` (
   `NOM` varchar(30) NOT NULL,
   `PRENOM` varchar(30) NOT NULL,
   `MAIL` varchar(50) NOT NULL,
-  `MDP` varchar(50) NOT NULL,
+  `MDP` varchar(64) NOT NULL,
   `TYPE_USER` varchar(1) NOT NULL,
   `SOLDE` float NULL,
   `DEFAILLANT` tinyint(1) NULL
