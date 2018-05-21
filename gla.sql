@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Dim 13 Mai 2018 à 13:32
+-- Généré le :  Lun 21 Mai 2018 à 10:22
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -23,42 +23,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `dvd`
---
-
-CREATE TABLE `dvd` (
-  `ID_RESSOURCE` int(11) NOT NULL,
-  `NOM_DVD` varchar(60) NOT NULL,
-  `NOM_REAL` varchar(40) NOT NULL,
-  `ANNEE_SORTIE` year(4) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `emplacement`
---
-
-CREATE TABLE `emplacement` (
-  `ID_RESSOURCE` int(11) NOT NULL,
-  `RANGEE` int(11) NOT NULL,
-  `ETAGERE` int(11) NOT NULL,
-  `NIVEAU` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `gestionnaire`
---
-
-CREATE TABLE `gestionnaire` (
-  `ID_GEST` int(5) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `info_gene`
 --
 
@@ -68,31 +32,8 @@ CREATE TABLE `info_gene` (
   `TITRE` varchar(50) NOT NULL,
   `TEXTE` varchar(500) NOT NULL,
   `ID_GEST` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
---
--- Structure de la table `livre`
---
-
-CREATE TABLE `livre` (
-  `ID_RESSOURCE` int(11) NOT NULL,
-  `AUTEUR` varchar(40) NOT NULL,
-  `ANNEE_PUBLI` year(4) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `membre`
---
-
-CREATE TABLE `membre` (
-  `ID_MEMBRE` int(5) NOT NULL,
-  `SOLDE` float NOT NULL,
-  `DEFAILLANT` tinyint(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -104,7 +45,7 @@ CREATE TABLE `perte` (
   `ID_PERTE` int(11) NOT NULL,
   `ID_RESSOURCE` int(11) NOT NULL,
   `ID_TYPE_PERTE` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -117,8 +58,8 @@ CREATE TABLE `reservation` (
   `ID_MEMBRE` int(11) NOT NULL,
   `ID_RESSOURCE` int(11) NOT NULL,
   `DATE_RESERV` date NOT NULL,
-  `DATE_RETOUR` date 
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `DATE_RETOUR` date NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -131,21 +72,21 @@ CREATE TABLE `ressource` (
   `NBR_EXEMP` int(11) NOT NULL,
   `CAUTION` float NOT NULL,
   `NBR_JOUR_RETOUR` int(11) NOT NULL,
-  `DEREFERENCE` tinyint(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `DEREFERENCE` tinyint(1) NOT NULL,
+  'TYPE_RESS' varchar(1) NOT NULL,
+  `TITRE` varchar(100) NULL,
+  `AUTEUR` varchar(40) NULL,
+  `ANNEE_PUBLI` year(4) NULL,
+  `NOM_DVD` varchar(60) NULL,
+  `NOM_REAL` varchar(40) NULL,
+  `ANNEE_SORTIE` year(4) NULL,
+  `NOM_REVUE` varchar(50) NULL,
+  `MOIS_PARUTION` int(2) NULL,
+  `ANNEE_PARUTION` year(4) NULL,
+  'NUM_NIVEAU' int(3),
+  'NUM_ETAGERE' int(3)
 
--- --------------------------------------------------------
-
---
--- Structure de la table `revue`
---
-
-CREATE TABLE `revue` (
-  `ID_RESSOURCE` int(11) NOT NULL,
-  `NOM_REVUE` varchar(50) NOT NULL,
-  `MODE_PARUTION` varchar(20) NOT NULL,
-  `DATE_PARUTION` date NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -156,7 +97,7 @@ CREATE TABLE `revue` (
 CREATE TABLE `type_perte` (
   `ID_TYPE_PERTE` int(11) NOT NULL,
   `LIBELLE_PERTE` varchar(20) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -170,30 +111,14 @@ CREATE TABLE `utilisateur` (
   `PRENOM` varchar(30) NOT NULL,
   `MAIL` varchar(50) NOT NULL,
   `MDP` varchar(50) NOT NULL,
-  `TYPE_USER` varchar(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `TYPE_USER` varchar(1) NOT NULL,
+  `SOLDE` float NULL,
+  `DEFAILLANT` tinyint(1) NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Index pour les tables exportées
 --
-
---
--- Index pour la table `dvd`
---
-ALTER TABLE `dvd`
-  ADD PRIMARY KEY (`ID_RESSOURCE`);
-
---
--- Index pour la table `emplacement`
---
-ALTER TABLE `emplacement`
-  ADD PRIMARY KEY (`ID_RESSOURCE`);
-
---
--- Index pour la table `gestionnaire`
---
-ALTER TABLE `gestionnaire`
-  ADD KEY `ID_GEST` (`ID_GEST`);
 
 --
 -- Index pour la table `info_gene`
@@ -201,18 +126,6 @@ ALTER TABLE `gestionnaire`
 ALTER TABLE `info_gene`
   ADD PRIMARY KEY (`ID_INFOGENE`),
   ADD KEY `ID_GEST` (`ID_GEST`);
-
---
--- Index pour la table `livre`
---
-ALTER TABLE `livre`
-  ADD PRIMARY KEY (`ID_RESSOURCE`);
-
---
--- Index pour la table `membre`
---
-ALTER TABLE `membre`
-  ADD PRIMARY KEY (`ID_MEMBRE`);
 
 --
 -- Index pour la table `perte`
@@ -236,12 +149,6 @@ ALTER TABLE `ressource`
   ADD PRIMARY KEY (`ID_RESSOURCE`);
 
 --
--- Index pour la table `revue`
---
-ALTER TABLE `revue`
-  ADD PRIMARY KEY (`ID_RESSOURCE`);
-
---
 -- Index pour la table `type_perte`
 --
 ALTER TABLE `type_perte`
@@ -257,11 +164,6 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour les tables exportées
 --
 
---
--- AUTO_INCREMENT pour la table `emplacement`
---
-ALTER TABLE `emplacement`
-  MODIFY `ID_RESSOURCE` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `info_gene`
 --
