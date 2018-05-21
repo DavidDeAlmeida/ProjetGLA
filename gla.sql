@@ -74,15 +74,9 @@ CREATE TABLE `ressource` (
   `NBR_JOUR_RETOUR` int(11) NOT NULL,
   `DEREFERENCE` tinyint(1) NOT NULL,
   'TYPE_RESS' varchar(1) NOT NULL,
-  `TITRE` varchar(100) NULL,
+  `NOM` varchar(100) NULL,
   `AUTEUR` varchar(40) NULL,
   `ANNEE_PUBLI` year(4) NULL,
-  `NOM_DVD` varchar(60) NULL,
-  `NOM_REAL` varchar(40) NULL,
-  `ANNEE_SORTIE` year(4) NULL,
-  `NOM_REVUE` varchar(50) NULL,
-  `MOIS_PARUTION` int(2) NULL,
-  `ANNEE_PARUTION` year(4) NULL,
   'NUM_NIVEAU' int(3),
   'NUM_ETAGERE' int(3)
 
