@@ -74,9 +74,9 @@ CREATE TABLE `ressource` (
   `NBR_JOUR_RETOUR` int(11) NOT NULL,
   `DEREFERENCE` tinyint(1) NOT NULL,
   'TYPE_RESS' varchar(1) NOT NULL,
-  `NOM` varchar(100) NULL,
-  `AUTEUR` varchar(40) NULL,
-  `ANNEE_PUBLI` year(4) NULL,
+  `NOM` varchar(100) NOT NULL,
+  `AUTEUR` varchar(40) NOT NULL,
+  `ANNEE_PUBLI` year(4) NOT NULL,
   'NUM_NIVEAU' int(3),
   'NUM_ETAGERE' int(3)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
