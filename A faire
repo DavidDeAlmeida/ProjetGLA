@@ -15,7 +15,7 @@ Partie Adhérent :
 Partie Gestionnaire :
 -Valider retour ressource et ajout d'un solde et perte d'une ressource.
 -Gestion des informations générales (Création/modification/suppression)
--Gestion des ressources (Création/modification/suppresion)
+-Gestion des ressources (Création/modification/suppression/ajout quantité)
 -Gestion des utilisateurs (Création/modification/suppression/rendre défaillant)
 -Gestion des flux (Estimation des couts de perte des ressources pour une période donnée.
                    Estimation des pertes engendrées par ressources.
