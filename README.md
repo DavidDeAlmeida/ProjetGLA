@@ -18,8 +18,8 @@ Et enfin il suffit d'accéder au site en utilisant un navigateur sur la page loc
 Pour avoir accès aux différentes fonctionnalités du projet, il faut se connecter avec un compte Gestionnaire ou un compte Membre.
 
 Comptes Gestionnaire : 
--Identifiant : Cedric, MDP : monmdp
--Identifiant : 
+-Identifiant : CEDRIC, MDP : monmdp
+-Identifiant : DAVID, MDP : pommefrite
 
 Comptes Membre : 
 -
