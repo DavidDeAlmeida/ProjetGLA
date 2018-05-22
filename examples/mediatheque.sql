@@ -1,14 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le :  mar. 22 mai 2018 à 16:47
--- Version du serveur :  5.6.38
--- Version de PHP :  7.2.1
+-- Client :  127.0.0.1
+-- Généré le :  Mar 22 Mai 2018 à 20:43
+-- Version du serveur :  5.7.14
+-- Version de PHP :  5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de données :  `mediatheque`
@@ -29,14 +35,14 @@ CREATE TABLE `info_gene` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `info_gene`
+-- Contenu de la table `info_gene`
 --
 
 INSERT INTO `info_gene` (`ID_INFOGENE`, `DATE_PUBLI`, `TITRE`, `TEXTE`, `ID_GEST`) VALUES
-(1, '2018-05-21', 'News', 'ATELIERS NUMERIQUES - MERCREDI 23 MAI', 'DAVID'),
-(2, '2018-05-15', 'News', 'ATELIERS CULTUREL - VENDREDI 18 MAI', 'CEDRIC'),
-(3, '2018-05-02', 'News', 'Revisions du BAC à la bibliothèque à partir du vendredi 8 juin 2018', 'DAVID'),
-(4, '2018-04-26', 'News', 'FERMETURE EXCEPTIONNELLE - MARDI 1 MAI 2018', 'DAVID');
+(1, '2018-05-21', 'ATELIERS NUMERIQUES - MERCREDI 23 MAI', 'Comment  créer ses propres jeux vidéos, programmer un robot pour le faire déplacer, comment fonctionne un ordinateur ? \r\nLe mercredi 23 mai, venez découvrir en ateliers découverte de quoi vos enfants sont capables !\r\nChristophe propose des initiations à la programmation sous Scratch, qui permet de découvrir la programmation de manière visuelle et ludique (blocs à assembler).', 'DAVID'),
+(2, '2018-05-15', 'ATELIERS CULTUREL - VENDREDI 18 MAI', 'L’étudiant se doit d’acquérir une culture artistique : savoir regarder une œuvre et l’analyser, savoir lire des textes théoriques pour nourrir sa propre réflexion et enrichir sa démarche conceptuelle. Il apprend à s’exprimer clairement à l’écrit comme à l’oral et à communiquer ses idées sur l’art contemporain.', 'CEDRIC'),
+(3, '2018-05-02', 'Revisions du BAC', 'La bibliothèque élargit ses horaires d’ouvertures à partir du vendredi 8 juin\r\npour les lycéens qui souhaitent réviser avant les épreuves du bac.', 'DAVID'),
+(4, '2018-04-26', 'FERMETURE EXCEPTIONNELLE - MARDI 1 MAI 2018', 'La bibliothèque sera exceptionnellement fermé le mardi 1 mai 2018.', 'DAVID');
 
 -- --------------------------------------------------------
 
@@ -52,7 +58,7 @@ CREATE TABLE `perte` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `perte`
+-- Contenu de la table `perte`
 --
 
 INSERT INTO `perte` (`ID_PERTE`, `ID_RESSOURCE`, `TYPE_PERTE`, `DATE_PERTE`) VALUES
@@ -73,7 +79,7 @@ CREATE TABLE `reservation` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `reservation`
+-- Contenu de la table `reservation`
 --
 
 INSERT INTO `reservation` (`ID_RESERV`, `ID_MEMBRE`, `ID_RESSOURCE`, `DATE_RESERV`, `DATE_RETOUR`) VALUES
@@ -124,7 +130,7 @@ CREATE TABLE `ressource` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `ressource`
+-- Contenu de la table `ressource`
 --
 
 INSERT INTO `ressource` (`ID_RESSOURCE`, `NBR_EXEMP`, `CAUTION`, `NBR_JOUR_RETOUR`, `DEREFERENCE`, `TYPE_RESS`, `NOM`, `AUTEUR`, `ANNEE_PUBLI`, `NUM_NIVEAU`, `NUM_ETAGERE`) VALUES
@@ -156,7 +162,7 @@ CREATE TABLE `utilisateur` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `utilisateur`
+-- Contenu de la table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`IDENTIFIANT`, `NOM`, `PRENOM`, `MAIL`, `MDP`, `TYPE_USER`, `SOLDE`, `DEFAILLANT`) VALUES
@@ -172,7 +178,7 @@ INSERT INTO `utilisateur` (`IDENTIFIANT`, `NOM`, `PRENOM`, `MAIL`, `MDP`, `TYPE_
 ('LOPEZ', 'Lopez', 'Julien', 'julien123@hotmail.fr', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'm', 73.2, 0);
 
 --
--- Index pour les tables déchargées
+-- Index pour les tables exportées
 --
 
 --
@@ -210,7 +216,7 @@ ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`IDENTIFIANT`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT pour les tables exportées
 --
 
 --
@@ -218,21 +224,21 @@ ALTER TABLE `utilisateur`
 --
 ALTER TABLE `info_gene`
   MODIFY `ID_INFOGENE` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT pour la table `perte`
 --
 ALTER TABLE `perte`
   MODIFY `ID_PERTE` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT pour la table `reservation`
 --
 ALTER TABLE `reservation`
   MODIFY `ID_RESERV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-
 --
 -- AUTO_INCREMENT pour la table `ressource`
 --
 ALTER TABLE `ressource`
   MODIFY `ID_RESSOURCE` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
