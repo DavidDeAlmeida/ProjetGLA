@@ -6,13 +6,15 @@
     <title>Accueil</title>
   </head>
   <body>
-    <?php 
+    <?php
 	include('../Vue/BarreNavigation.php');
-	
+
 	include('../Modele/FonctionReservation.php');
 	$idR = $_POST["idR"];
 	$Confirmation = Reservation($idR);
-	
+  $caution = Caution($idR);
+  RetirerSolde($caution,$_SESSION['identifiant']);
+
 	include('../Vue/VueReservation.php');
 	?>
 
