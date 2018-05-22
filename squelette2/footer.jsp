@@ -1,1 +1,0 @@
-<span id="mentionsLegales">Copyright © 2018 - Médiathèque Raymond Queneau</span>
