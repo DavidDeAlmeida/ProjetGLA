@@ -12,7 +12,7 @@ while($resultat = mysqli_fetch_array($listInfoGene) and $i<10 ){
 		echo "<td>".$resultat['TEXTE']."</td>";
 	echo "</tr>";
 	echo "<tr>";
-		echo "<td align='right'>Rédigé par ".$resultat['ID_GEST']." en ".$datePubli->format('d/m/Y')."</td>";
+		echo "<td align='right'>Rédigé par ".$resultat['ID_GEST']." le ".$datePubli->format('d/m/Y')."</td>";
 	echo "</tr";
 	echo "</table>";
 	echo "<hr>";
