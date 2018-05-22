@@ -13,7 +13,7 @@ Partie Adhérent :
 
 
 Partie Gestionnaire :
--Valider retour ressource et ajout d'un solde et perte d'une ressource.
+-Valider retour ressource et ajout d'un solde et perte d'une ressource.  /Fait
 -Gestion des informations générales (Création/modification/suppression)
 -Gestion des ressources (Création/modification/suppression/ajout quantité)
 -Gestion des utilisateurs (Création/modification/suppression/rendre défaillant)
