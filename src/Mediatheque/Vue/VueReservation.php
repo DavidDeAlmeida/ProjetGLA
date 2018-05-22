@@ -1,6 +1,7 @@
 ﻿<?php
 if($Confirmation == 1){
 	echo "Votre réservation a bien été enregistrée.";
+	$_SESSION['SOLDE'] = $_SESSION['SOLDE'] - $caution;
 }
 else if($Confirmation == 2){
 	echo "Il n'y a plus d'exemplaires disponibles de cette ressource.";
